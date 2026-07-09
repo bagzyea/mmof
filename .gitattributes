@@ -1,0 +1,9 @@
+# Normalize text line endings; auto-detect text vs binary
+* text=auto eol=lf
+
+# Explicitly treat images as binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.gif binary
