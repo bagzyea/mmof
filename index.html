@@ -6,14 +6,14 @@
 <title>MMOF — Website Redesign Concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Archivo:wght@500;600;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
   html,body{margin:0}
   body{
-    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    font-family:'Archivo',system-ui,sans-serif;
     color:#16181c;
-    background:#111318;
+    background:#000000;
     -webkit-font-smoothing:antialiased;
   }
 
@@ -26,14 +26,14 @@
     display:inline-flex;align-items:center;gap:12px;margin-bottom:30px;
   }
   .brandmark .m{
-    width:40px;height:40px;border-radius:5px;background:#fff;color:#111318;
+    width:40px;height:40px;border-radius:5px;background:#8C2344;color:#F7F0EC;
     display:flex;align-items:center;justify-content:center;
-    font:700 20px 'Spectral',serif;
+    font:700 20px 'Archivo',sans-serif;
   }
-  .brandmark span{font:600 20px 'Spectral',serif;letter-spacing:.02em}
+  .brandmark span{font:700 20px 'Archivo',sans-serif;letter-spacing:.01em}
   header.top h1{
-    font:600 clamp(30px,5vw,52px)/1.08 'Spectral',serif;
-    margin:0 0 16px;letter-spacing:-.01em;
+    font:700 clamp(30px,5vw,52px)/1.08 'Archivo',sans-serif;
+    margin:0 0 16px;letter-spacing:-.02em;
   }
   header.top p{
     max-width:640px;margin:0 auto;font-size:17px;line-height:1.65;
@@ -46,8 +46,8 @@
 
   /* ---- cards ---- */
   .cards{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
-    padding:26px 0 80px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:26px;
+    max-width:860px;margin:0 auto;padding:26px 0 80px;
   }
   @media(max-width:920px){.cards{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
 
@@ -84,24 +84,17 @@
   /* accent strip at top of each card */
   .card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;z-index:3}
 
-  /* ---- Meridian (2a) ---- */
-  .c-meridian::before{background:#b08d57}
-  .c-meridian .name{font-family:'Spectral',serif;color:#0e1b2c}
-  .c-meridian .tag{background:#0e1b2c;color:#f4f1ea}
-  .c-meridian .go{color:#0e1b2c}
+  /* ---- Meridian (2a) — Dark Pine surface, Pinot Red accent ---- */
+  .c-meridian::before{background:#1E4440}
+  .c-meridian .name{font-family:'Archivo',sans-serif;font-weight:700;color:#1E4440}
+  .c-meridian .tag{background:#1E4440;color:#F7F0EC}
+  .c-meridian .go{color:#8C2344}
 
-  /* ---- Twin Engine (2b) ---- */
-  .c-twin::before{background:#fdd835}
-  .c-twin .name{font-family:'Archivo',sans-serif;font-weight:900;
-    text-transform:uppercase;letter-spacing:-.02em;color:#0f0f0f}
-  .c-twin .tag{background:#fdd835;color:#0f0f0f}
-  .c-twin .go{color:#0f0f0f}
-
-  /* ---- Field (2c) ---- */
-  .c-field::before{background:#1b5e3f}
-  .c-field .name{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:#16181c}
-  .c-field .tag{background:#1b5e3f;color:#fff}
-  .c-field .go{color:#1b5e3f}
+  /* ---- Field (2c) — Pinot Red lead, Noir ---- */
+  .c-field::before{background:#8C2344}
+  .c-field .name{font-family:'Archivo',sans-serif;font-weight:700;color:#000000}
+  .c-field .tag{background:#8C2344;color:#F7F0EC}
+  .c-field .go{color:#8C2344}
 
   footer.foot{
     color:rgba(255,255,255,.4);text-align:center;font-size:13px;line-height:1.7;
@@ -114,10 +107,11 @@
   <div class="wrap">
     <header class="top">
       <div class="brandmark"><div class="m">M</div><span>MMOF</span></div>
-      <div class="kicker">Website Redesign · Three Directions</div>
+      <div class="kicker">Website Redesign · Two Directions</div>
       <h1>Pick a design direction.</h1>
-      <p>Three full concepts for the new MMOF homepage — same story, three different
-         personalities. Open any one to explore the full landing page and an inner-section peek.</p>
+      <p>Two full concepts for the new MMOF homepage, both on the MMOF brand palette —
+         same story, two different personalities. Open either one to explore the full
+         landing page and an inner-section peek.</p>
     </header>
 
     <main class="cards">
@@ -129,25 +123,10 @@
         </div>
         <div class="body">
           <h2 class="name">Meridian</h2>
-          <p class="desc">Restrained and investor-grade. Ink navy and ivory, Spectral serif,
-             brass accents. Quiet confidence that leans BlackRock.</p>
-          <div class="meta">Ink navy · Brass · Serif</div>
+          <p class="desc">Restrained and investor-grade. Dark Pine surfaces on off-white,
+             Pinot Red primary, Tangerine detailing, Archivo throughout.</p>
+          <div class="meta">Dark Pine · Pinot Red · Archivo</div>
           <span class="go">Explore Meridian <span class="arrow">&rarr;</span></span>
-        </div>
-      </a>
-
-      <!-- 2b -->
-      <a class="card c-twin" href="twin-engine.html">
-        <div class="shot">
-          <span class="tag">2B</span>
-          <img src="assets/ee1865ba-30d6-4004-95e5-33144580c96d.jpg" alt="Twin Engine concept preview">
-        </div>
-        <div class="body">
-          <h2 class="name">Twin Engine</h2>
-          <p class="desc">Bold and confident. Black and yellow, heavy Archivo, a marquee ticker
-             and split-screen "Capital | Building." Matches the Laboremus system.</p>
-          <div class="meta">Black · Yellow · Archivo</div>
-          <span class="go">Explore Twin Engine <span class="arrow">&rarr;</span></span>
         </div>
       </a>
 
@@ -159,9 +138,9 @@
         </div>
         <div class="body">
           <h2 class="name">Field</h2>
-          <p class="desc">Clean and editorial. Airy whitespace, Bricolage display type, a
-             growth-green accent. A warm, Shona-leaning point of view.</p>
-          <div class="meta">Editorial · Green · Bricolage</div>
+          <p class="desc">Clean and editorial. Airy whitespace, Pinot Red lead on off-white,
+             Noir contrast, Tangerine pops, Archivo throughout.</p>
+          <div class="meta">Pinot Red · Noir · Archivo</div>
           <span class="go">Explore Field <span class="arrow">&rarr;</span></span>
         </div>
       </a>

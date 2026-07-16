@@ -1,23 +1,35 @@
 # MMOF — Website Redesign Concepts
 
-A static gallery of three homepage design directions for the new MMOF website.
-The landing page shows all three as cards; clicking a card opens that concept's
-full-length page.
+A static gallery of the two homepage design directions for the new MMOF website.
+The landing page shows both as cards; clicking a card opens that concept's
+full-length page. Both concepts use the official MMOF brand palette and Archivo
+typography (see `MMOF_Artwork_Brandguide_LR.pdf`).
+
+## Brand palette
+
+| Role | Name | Hex |
+|------|------|-----|
+| Primary / trademark | Pinot Red | `#8C2344` |
+| Primary | Noir | `#000000` |
+| Primary base | Off-White | `#F7F0EC` |
+| Secondary accent | Tangerine | `#D67C46` |
+| Secondary surface | Dark Pine | `#1E4440` |
+| Secondary | Dusk Grey | `#C3BDB8` |
+
+Typeface: **Archivo** (Bold for headings/logo, Regular for body).
 
 ## Concepts
 
 | Direction | Page | Personality |
 |-----------|------|-------------|
-| **2A · Meridian** | [`meridian.html`](meridian.html) | Restrained, investor-grade — ink navy + ivory, Spectral serif, brass accent. BlackRock-leaning. |
-| **2B · Twin Engine** | [`twin-engine.html`](twin-engine.html) | Bold and confident — black / yellow, heavy Archivo, marquee ticker, split "Capital \| Building." |
-| **2C · Field** | [`field.html`](field.html) | Clean editorial — airy whitespace, Bricolage display, growth-green accent. Shona-leaning. |
+| **2A · Meridian** | [`meridian.html`](meridian.html) | Restrained, investor-grade — Dark Pine surfaces on Off-White, Pinot Red primary, Tangerine detailing, Archivo throughout. |
+| **2C · Field** | [`field.html`](field.html) | Clean editorial — airy whitespace, Pinot Red lead on Off-White, Noir contrast, Tangerine pops, Archivo throughout. |
 
 ## Structure
 
 ```
-index.html          Landing page (three concept cards)
+index.html          Landing page (two concept cards)
 meridian.html        Concept 2A
-twin-engine.html     Concept 2B
 field.html           Concept 2C
 assets/              Photography (16 JPEGs, embedded originally, now real files)
 ```
