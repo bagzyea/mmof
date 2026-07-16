@@ -12,20 +12,34 @@
 html,body{margin:0}
 body{font-family:'Archivo',system-ui,sans-serif}
 @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.backhome{position:fixed;top:16px;left:16px;z-index:9999;display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;background:rgba(21,23,28,.86);color:#fff;font:600 13px 'Archivo',sans-serif;text-decoration:none;backdrop-filter:blur(6px);box-shadow:0 4px 16px rgba(0,0,0,.18)}
+.backhome{position:fixed;bottom:16px;left:16px;z-index:9999;display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;background:rgba(21,23,28,.86);color:#fff;font:600 13px 'Archivo',sans-serif;text-decoration:none;backdrop-filter:blur(6px);box-shadow:0 4px 16px rgba(0,0,0,.18)}
 .backhome:hover{background:#15171c}
+/* unified warm/burgundy grade for on-brand photo continuity */
+#page img{filter:saturate(1.06) contrast(1.03) sepia(.08) hue-rotate(-6deg) brightness(1.01)}
+/* modern investor polish */
+html{scroll-behavior:smooth}
+#page{font-variant-numeric:tabular-nums}
+#nav{position:sticky;top:0;z-index:100;transition:box-shadow .3s ease,background .3s ease}
+#nav.nav-scrolled{box-shadow:0 8px 30px -16px rgba(0,0,0,.32)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.reveal.in{opacity:1;transform:none}
+.enh-btn{cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),filter .25s ease}
+.enh-btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.enh-card{transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+.enh-card:hover{transform:translateY(-5px)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.enh-btn,.enh-card{transition:none}.enh-btn:hover,.enh-card:hover{transform:none;filter:none}}
 </style>
 </head>
 <body>
 <a class="backhome" href="index.html">&larr; All concepts</a>
 
-<div style="font-family:'Archivo',sans-serif;color:#26313f;background:#F7F0EC">
+<div id="page" style="font-family:'Archivo',sans-serif;color:#26313f;background:#F7F0EC">
 
 <!-- nav -->
-<div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;background:#F7F0EC;border-bottom:1px solid rgba(30,68,64,.1);position:relative;z-index:6">
+<div id="nav" style="display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(247,240,236,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,68,64,.08)">
 <div style="display:flex;align-items:center;gap:13px">
-<div style="width:30px;height:30px;background:#8C2344;border-radius:3px;display:flex;align-items:center;justify-content:center;font:700 13px 'Archivo',sans-serif;color:#F7F0EC">M</div>
-<span style="font:600 17px 'Archivo',sans-serif;letter-spacing:.01em;color:#1E4440">MMOF</span>
+<svg width="28" height="28" viewBox="0 0 100 100" role="img" aria-label="MMOF" style="display:block;flex:none"><g fill="#8C2344"><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(90 50 50)"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(180 50 50)"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(270 50 50)"/></g></svg>
+<span style="font:500 17px 'Archivo',sans-serif;letter-spacing:.06em;color:#1E4440">MMOF</span>
 </div>
 <div style="display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;color:#3a4654">
 <span>Investment</span><span>Venture Building</span><span>Impact</span><span>Team</span>
@@ -37,8 +51,8 @@ body{font-family:'Archivo',system-ui,sans-serif}
 </div>
 
 <!-- hero -->
-<div style="position:relative;background:#1E4440;color:#F7F0EC;padding:88px 56px 132px;overflow:hidden">
-<div style="position:absolute;right:-30px;top:-70px;font:700 360px 'Archivo',sans-serif;line-height:.8;color:rgba(247,240,236,.035);pointer-events:none;z-index:0">M</div>
+<div style="position:relative;background:radial-gradient(130% 95% at 80% -10%,#255852 0%,#1E4440 55%);color:#F7F0EC;padding:88px 56px 132px;overflow:hidden">
+<svg width="520" height="520" viewBox="0 0 100 100" aria-hidden="true" style="position:absolute;right:-90px;top:-120px;pointer-events:none;z-index:0"><g fill="rgba(247,240,236,.05)"><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(90 50 50)"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(180 50 50)"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(270 50 50)"/></g></svg>
 <div style="position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center">
 <div>
 <div style="font:600 11px 'Archivo',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#D67C46;margin-bottom:26px">Capital · Venture Building · Africa</div>
@@ -51,7 +65,7 @@ body{font-family:'Archivo',system-ui,sans-serif}
 </div>
 <div style="position:relative">
 <div style="height:480px;border-radius:8px;overflow:hidden;box-shadow:0 50px 90px -28px rgba(0,0,0,.65)">
-<img src="assets/20ee8825-96ee-4d7a-b5da-b06586fca6c3.jpg" alt="African business leaders in conversation" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82) contrast(1.02)">
+<img src="assets/20ee8825-96ee-4d7a-b5da-b06586fca6c3.jpg" alt="African business leaders in conversation" style="width:100%;height:100%;object-fit:cover;display:block">
 <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,68,64,.05),rgba(30,68,64,.45))"></div>
 </div>
 <div style="position:absolute;right:-22px;top:30px;background:#D67C46;color:#1E4440;font:600 10.5px 'Archivo',sans-serif;letter-spacing:.14em;padding:8px 13px;border-radius:4px;box-shadow:0 14px 26px -8px rgba(0,0,0,.5)">DAKAR · KAMPALA · NAIROBI</div>
@@ -106,7 +120,7 @@ body{font-family:'Archivo',system-ui,sans-serif}
 </div>
 <div style="position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:start">
 <div style="position:relative;z-index:1;background:#fff;border:1px solid rgba(30,68,64,.1);border-radius:8px;padding:0 0 40px;margin-right:-26px;box-shadow:0 30px 60px -30px rgba(30,68,64,.4);overflow:hidden">
-<div style="height:170px;overflow:hidden"><img src="assets/34d963ef-3a01-4ff8-8289-6af471c48601.jpg" alt="Investment discussion" style="width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85)"></div>
+<div style="height:170px;overflow:hidden"><img src="assets/34d963ef-3a01-4ff8-8289-6af471c48601.jpg" alt="Investment discussion" style="width:100%;height:100%;object-fit:cover;display:block"></div>
 <div style="padding:34px 40px 0">
 <div style="font:500 14px 'Archivo',sans-serif;color:#8C2344;margin-bottom:14px">01 — Investment</div>
 <h3 style="font:600 24px/1.2 'Archivo',sans-serif;color:#1E4440;margin:0 0 14px">Growth capital, structured for the climb</h3>
@@ -183,7 +197,7 @@ body{font-family:'Archivo',system-ui,sans-serif}
 </div>
 
 <!-- fit checker -->
-<div style="background:#183531;color:#F7F0EC;padding:74px 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+<div style="background:#1E4440;color:#F7F0EC;padding:74px 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
 <div>
 <div style="font:600 11px 'Archivo',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#D67C46;margin-bottom:20px">Are we a fit?</div>
 <h2 style="font:400 42px/1.1 'Archivo',sans-serif;margin:0 0 18px">Two minutes to find out.</h2>
@@ -248,7 +262,7 @@ body{font-family:'Archivo',system-ui,sans-serif}
 </div>
 
 <!-- cohort + apply -->
-<div style="background:#183531;color:#F7F0EC;padding:80px 56px">
+<div style="background:#1E4440;color:#F7F0EC;padding:80px 56px">
 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap">
 <div><div style="font:500 11px 'Archivo',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D67C46;margin-bottom:18px">Cohorts</div><h2 style="font:400 40px/1.1 'Archivo',sans-serif;margin:0;max-width:520px">We back companies in cohorts. The next one is forming now.</h2></div>
 <div style="background:#D67C46;color:#1E4440;padding:16px 22px;border-radius:6px"><div style="font:600 11px 'Archivo',sans-serif;letter-spacing:.1em">COHORT 06</div><div style="font:500 18px 'Archivo',sans-serif;margin-top:3px">Applications close 30 Sept</div></div>
@@ -276,7 +290,7 @@ body{font-family:'Archivo',system-ui,sans-serif}
 </div>
 
 <!-- INNER PEEK: Investment -->
-<div style="background:#183531;color:#F7F0EC;padding:30px 56px;display:flex;align-items:center;gap:16px">
+<div style="background:#1E4440;color:#F7F0EC;padding:30px 56px;display:flex;align-items:center;gap:16px">
 <span style="font:500 11px 'Archivo',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D67C46">Inner page preview</span>
 <span style="height:1px;flex:1;background:rgba(214,124,70,.3)"></span>
 <span style="font-size:13px;color:rgba(247,240,236,.6)">Investment</span>
@@ -307,12 +321,34 @@ body{font-family:'Archivo',system-ui,sans-serif}
 <span style="font-size:15px;font-weight:600;color:#F7F0EC;background:#1E4440;padding:16px 30px;border-radius:3px;white-space:nowrap;position:relative;z-index:1">Start a conversation</span>
 </div>
 <div style="background:#1E4440;color:rgba(247,240,236,.6);padding:30px 56px;display:flex;justify-content:space-between;font-size:13px">
-<span style="font:600 15px 'Archivo',sans-serif;color:#F7F0EC">MMOF</span>
+<span style="display:inline-flex;align-items:center;gap:9px;font:500 15px 'Archivo',sans-serif;letter-spacing:.06em;color:#F7F0EC"><svg width="20" height="20" viewBox="0 0 100 100" aria-hidden="true" style="flex:none"><g fill="#F7F0EC"><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(90 50 50)"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(180 50 50)"/><path d="M46,6 L26,6 A20,20 0 0 0 6,26 L6,46 L26,46 L26,26 L46,26 Z" transform="rotate(270 50 50)"/></g></svg>MMOF</span>
 <span>Investment · Venture Building · Impact · Team</span>
 <span>© MMOF</span>
 </div>
 
 </div>
 
+<script>
+(function(){
+ var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ var page=document.getElementById('page'),nav=document.getElementById('nav');
+ if(nav){var f=function(){nav.classList.toggle('nav-scrolled',(window.scrollY||0)>10);};f();addEventListener('scroll',f,{passive:true});}
+ if(page){
+  var kids=Array.prototype.slice.call(page.children);
+  if(!rm&&'IntersectionObserver'in window){
+   var vh=window.innerHeight||800;
+   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -7% 0px'});
+   kids.forEach(function(s){if(s.getBoundingClientRect().top>vh*0.85){s.classList.add('reveal');io.observe(s);}});
+  }
+  var els=page.querySelectorAll('div,span,a');
+  Array.prototype.forEach.call(els,function(el){
+   var s=el.getAttribute('style')||'',t=(el.textContent||'').trim();
+   if(el.children.length===0&&t&&t.length<28&&/padding:1[0-9]px/.test(s)&&/background:#(8C2344|000000|1E4440|F7F0EC)/.test(s)&&/border-radius/.test(s)){el.classList.add('enh-btn');}
+   else if(el.children.length===0&&t&&t.length<28&&/padding:1[0-9]px/.test(s)&&/border:1px solid/.test(s)&&/border-radius:(999px|3px)/.test(s)){el.classList.add('enh-btn');}
+   if(el.children.length>0&&/box-shadow/.test(s)&&/border-radius:([789]|1[0-9])px/.test(s)&&!el.querySelector('img')){el.classList.add('enh-card');}
+  });
+ }
+})();
+</script>
 </body>
 </html>
