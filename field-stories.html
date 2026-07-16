@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stories — MMOF · Field</title>
+<meta name="description" content="Companies growing with MMOF — case studies from across the portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="field.css">
+</head>
+<body data-page="stories">
+<a class="backhome" href="index.html">&larr; All concepts</a>
+
+<div id="page">
+
+  <!-- hero -->
+  <div class="section" style="position:relative;overflow:hidden;padding-bottom:36px;background:radial-gradient(70% 55% at 100% -5%,rgba(140,35,68,.05),transparent 60%)">
+    <div class="wrap">
+      <p class="eyebrow">Stories</p>
+      <h1 style="font:900 clamp(38px,5.5vw,64px)/0.98 'Archivo',sans-serif;font-stretch:62%;letter-spacing:.01em;text-transform:uppercase;margin:0 0 22px;max-width:14ch">Companies growing with us.</h1>
+      <p class="lead" style="max-width:560px;margin:0">Not a portfolio list — the businesses we've built beside. Capital and craft, and the numbers that followed.</p>
+    </div>
+  </div>
+
+  <!-- grid -->
+  <div class="section" style="padding-top:8px">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" id="story-grid"></div>
+    </div>
+  </div>
+
+  <!-- cta -->
+  <div class="section" style="display:flex;justify-content:space-between;align-items:center;gap:40px;padding-top:0">
+    <h2 class="h2" style="max-width:18ch">Want your company on this page?</h2>
+    <a class="btn btn-primary" href="field-get-in-touch.html">Start a conversation</a>
+  </div>
+
+</div>
+
+<script>
+var STORIES=[
+  ['KH','Kazi Health','Healthcare · Kenya','3→11 sites','field-story-kazi.html'],
+  ['RL','Riverline Logistics','Logistics · Nigeria','↑ 3.4× vol','field-story-riverline.html'],
+  ['BF','Bunda Foods','FMCG · Tanzania','↑ 1.9× rev','field-story-bunda.html'],
+  ['SA','Sahel AgriWorks','Agribusiness · Uganda','↑ 2.1× rev',''],
+  ['PP','Pamoja Pharma','Pharma · Rwanda','+240 jobs',''],
+  ['NE','Nyota Energy','Energy · Ghana','↑ 2.6× rev','']
+];
+function storyCard(s){
+  var soon = s[4]==='';
+  var inner='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">'+
+    '<div style="width:42px;height:42px;border-radius:50%;background:#8C2344;color:#F7F0EC;display:flex;align-items:center;justify-content:center;font:700 14px \'Archivo\',sans-serif">'+s[0]+'</div>'+
+    '<span style="font:600 11px \'Archivo\',sans-serif;letter-spacing:.04em;color:#8C2344;background:#F3E1E7;padding:5px 9px;border-radius:999px">'+s[3]+'</span></div>'+
+    '<h4 style="font:700 18px \'Archivo\',sans-serif;color:#000;margin:0 0 5px">'+s[1]+'</h4>'+
+    '<div style="font:500 12px \'Archivo\',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#8a9088">'+s[2]+'</div>'+
+    (soon?'<div style="margin-top:14px;font-size:12px;color:#a8aea6;font-style:italic">Story coming soon</div>'
+         :'<div style="margin-top:14px"><span class="link-arrow">Read the story →</span></div>');
+  if(soon) return '<div class="card">'+inner+'</div>';
+  return '<a class="card enh-card" href="'+s[4]+'" style="display:block;text-decoration:none">'+inner+'</a>';
+}
+document.getElementById('story-grid').innerHTML=STORIES.map(storyCard).join('');
+</script>
+<script src="field.js"></script>
+</body>
+</html>

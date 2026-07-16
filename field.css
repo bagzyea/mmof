@@ -1,0 +1,86 @@
+/* ============================================================
+   MMOF · Field (2C) — shared theme
+   Pinot Red lead on Off-White, Noir contrast, Archivo throughout
+   ============================================================ */
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',system-ui,sans-serif;color:#000;background:#F7F0EC;-webkit-font-smoothing:antialiased}
+#page{font-variant-numeric:tabular-nums}
+img{max-width:100%}
+#page img{filter:saturate(1.06) contrast(1.03) sepia(.08) hue-rotate(-6deg) brightness(1.01)}
+a{color:inherit}
+
+/* ---- layout helpers ---- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 60px}
+.section{padding:74px 60px}
+.section .wrap{padding:0}
+.eyebrow{font:500 12px 'Archivo',sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#8C2344;margin:0 0 20px}
+.h2{font:900 clamp(30px,4vw,44px)/1.04 'Archivo',sans-serif;letter-spacing:-.02em;color:#000;margin:0}
+.lead{font-size:17px;line-height:1.7;color:#4a5057}
+
+/* ---- nav (injected by field.js) ---- */
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:20px 60px;background:rgba(247,240,236,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.05);transition:box-shadow .3s ease}
+.nav.nav-scrolled{box-shadow:0 8px 30px -16px rgba(0,0,0,.22)}
+.nav a{text-decoration:none}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.wordmark{font:500 18px 'Archivo',sans-serif;letter-spacing:.05em;color:#000}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;color:#3c4148}
+.nav-links a{position:relative;transition:color .2s}
+.nav-links a:hover{color:#8C2344}
+.nav-links a.active{color:#8C2344;font-weight:600}
+.nav-cta{display:flex;align-items:center;gap:20px}
+.mmof-mark{display:block;flex:none}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:15px;font-weight:600;
+  text-decoration:none;padding:15px 28px;border-radius:999px;
+  transition:transform .25s cubic-bezier(.2,.7,.2,1),filter .25s ease}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.btn-primary{background:#8C2344;color:#F7F0EC}
+.btn-ghost{border:1px solid #c9ccc6;color:#000}
+.btn-sm{padding:10px 20px;font-size:13.5px}
+.link-arrow{font-size:13.5px;font-weight:600;color:#8C2344;text-decoration:none;border-bottom:2px solid #8C2344;padding-bottom:2px}
+
+/* ---- cards ---- */
+.card{background:#fff;border:1px solid #ece9e2;border-radius:14px;padding:24px;box-shadow:0 16px 34px -24px rgba(0,0,0,.4)}
+
+/* ---- footer (injected by field.js) ---- */
+.site-footer{background:#000;color:rgba(247,240,236,.66);padding:64px 60px 30px;margin-top:0}
+.site-footer .cols{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.site-footer h4{font:500 12px 'Archivo',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D67C46;margin:0 0 16px}
+.site-footer a{color:rgba(247,240,236,.66);text-decoration:none;transition:color .2s}
+.site-footer a:hover{color:#F7F0EC}
+.site-footer .fcol a{display:block;margin-bottom:10px;font-size:14px}
+.site-footer .bottom{max-width:1180px;margin:38px auto 0;padding-top:22px;border-top:1px solid rgba(247,240,236,.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:rgba(247,240,236,.5)}
+.site-footer .tag{font-size:14px;line-height:1.65;color:rgba(247,240,236,.6);margin:14px 0 0;max-width:300px}
+
+/* ---- polish ---- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.reveal.in{opacity:1;transform:none}
+.enh-btn{cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1),filter .25s ease}
+.enh-btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.enh-card{transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+.enh-card:hover{transform:translateY(-5px)}
+
+/* ---- back-to-gallery (preview only) ---- */
+.backhome{position:fixed;bottom:16px;left:16px;z-index:9999;display:inline-flex;align-items:center;gap:7px;
+  padding:9px 15px;border-radius:999px;background:rgba(21,23,28,.86);color:#fff;font:600 13px 'Archivo',sans-serif;
+  text-decoration:none;backdrop-filter:blur(6px);box-shadow:0 4px 16px rgba(0,0,0,.18)}
+.backhome:hover{background:#15171c}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .section{padding:52px 24px}
+  .wrap{padding:0 24px}
+  .site-footer .cols{grid-template-columns:1fr;gap:30px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .enh-btn,.enh-card{transition:none}
+  .enh-btn:hover,.enh-card:hover{transform:none;filter:none}
+}

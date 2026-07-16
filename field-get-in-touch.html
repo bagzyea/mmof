@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get in Touch — MMOF · Field</title>
+<meta name="description" content="Start a conversation with MMOF — for founders raising and growing, and partners investing alongside us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="field.css">
+<style>
+  .fld{display:block;width:100%;font:400 15px 'Archivo',sans-serif;color:#000;background:#fff;border:1px solid #dcd8cf;border-radius:12px;padding:14px 16px;margin-top:6px}
+  .fld:focus{outline:2px solid #8C2344;outline-offset:1px;border-color:#8C2344}
+  .lbl{font:600 12px 'Archivo',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#6a7178}
+  .frow{margin-bottom:18px}
+</style>
+</head>
+<body data-page="contact">
+<a class="backhome" href="index.html">&larr; All concepts</a>
+
+<div id="page">
+
+  <!-- hero -->
+  <div class="section" style="position:relative;overflow:hidden;padding-bottom:24px;background:radial-gradient(70% 55% at 100% -5%,rgba(140,35,68,.05),transparent 60%)">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h1 style="font:900 clamp(38px,5.5vw,64px)/0.98 'Archivo',sans-serif;font-stretch:62%;letter-spacing:.01em;text-transform:uppercase;margin:0 0 22px;max-width:16ch">Let's grow it together.</h1>
+      <p class="lead" style="max-width:560px;margin:0">Whether you're building a business worth backing or investing alongside hands-on operators — tell us where you are and we'll take it from there.</p>
+    </div>
+  </div>
+
+  <!-- form + details -->
+  <div class="section" style="padding-top:8px">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:start">
+
+        <!-- form -->
+        <form class="card" style="padding:30px 30px 32px" onsubmit="this.querySelector('.done').style.display='block';return false;">
+          <div style="display:flex;gap:12px">
+            <div class="frow" style="flex:1"><span class="lbl">First name</span><input class="fld" type="text" name="first" required></div>
+            <div class="frow" style="flex:1"><span class="lbl">Last name</span><input class="fld" type="text" name="last" required></div>
+          </div>
+          <div class="frow"><span class="lbl">Work email</span><input class="fld" type="email" name="email" required></div>
+          <div class="frow"><span class="lbl">Company</span><input class="fld" type="text" name="company"></div>
+          <div class="frow"><span class="lbl">I am a…</span>
+            <select class="fld" name="who">
+              <option>Founder — raising &amp; growing</option>
+              <option>Partner — co-investing</option>
+              <option>Fund investor</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="frow"><span class="lbl">Message</span><textarea class="fld" name="message" rows="4" placeholder="A line or two on your business and what you're looking for."></textarea></div>
+          <button class="btn btn-primary" type="submit" style="border:none;width:100%;justify-content:center">Send message</button>
+          <div class="done" style="display:none;margin-top:16px;font-size:14px;color:#1E4440;background:rgba(30,68,64,.08);border-radius:10px;padding:12px 14px">Thanks — this is a concept form. Wire it to Formspree / Web3Forms / a Pages Function before launch.</div>
+        </form>
+
+        <!-- details -->
+        <div>
+          <div style="margin-bottom:30px">
+            <p class="eyebrow">Prefer email?</p>
+            <a href="mailto:hello@mmof.example" style="font:700 20px 'Archivo',sans-serif;color:#8C2344;text-decoration:none">hello@mmof.example</a>
+          </div>
+          <div style="margin-bottom:30px">
+            <p class="eyebrow">On the ground</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+              <div class="card" style="padding:16px 18px"><div style="font:700 16px 'Archivo',sans-serif">Kampala</div><div style="font-size:12.5px;color:#8a9088;margin-top:3px">Uganda</div></div>
+              <div class="card" style="padding:16px 18px"><div style="font:700 16px 'Archivo',sans-serif">Nairobi</div><div style="font-size:12.5px;color:#8a9088;margin-top:3px">Kenya</div></div>
+              <div class="card" style="padding:16px 18px"><div style="font:700 16px 'Archivo',sans-serif">Lagos</div><div style="font-size:12.5px;color:#8a9088;margin-top:3px">Nigeria</div></div>
+              <div class="card" style="padding:16px 18px"><div style="font:700 16px 'Archivo',sans-serif">Accra</div><div style="font-size:12.5px;color:#8a9088;margin-top:3px">Ghana</div></div>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">Follow</p>
+            <a class="link-arrow" href="#">LinkedIn &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="field.js"></script>
+</body>
+</html>

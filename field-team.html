@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team — MMOF · Field</title>
+<meta name="description" content="The operating team that builds alongside the companies MMOF backs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="field.css">
+</head>
+<body data-page="team">
+<a class="backhome" href="index.html">&larr; All concepts</a>
+
+<div id="page">
+
+  <!-- hero -->
+  <div class="section" style="position:relative;overflow:hidden;padding-bottom:40px;background:radial-gradient(70% 55% at 100% -5%,rgba(140,35,68,.05),transparent 60%)">
+    <div class="wrap">
+      <p class="eyebrow">Team</p>
+      <h1 style="font:900 clamp(40px,6vw,68px)/0.98 'Archivo',sans-serif;font-stretch:62%;letter-spacing:.01em;text-transform:uppercase;margin:0 0 22px;max-width:12ch">The people who build with you.</h1>
+      <p class="lead" style="max-width:560px;margin:0">Operators, investors and builders across the continent — the same people who sit in the room with founders, not just on the cap table. This is who you actually work with.</p>
+      <div style="display:flex;gap:40px;margin-top:40px;flex-wrap:wrap">
+        <div><div style="font:900 34px 'Archivo',sans-serif;font-stretch:62%;color:#8C2344">7</div><div style="font-size:13px;color:#6a7178;margin-top:2px">markets on the ground</div></div>
+        <div><div style="font:900 34px 'Archivo',sans-serif;font-stretch:62%;color:#8C2344">40+</div><div style="font-size:13px;color:#6a7178;margin-top:2px">operators & investors</div></div>
+        <div><div style="font:900 34px 'Archivo',sans-serif;font-stretch:62%;color:#8C2344">1</div><div style="font-size:13px;color:#6a7178;margin-top:2px">team, two engines</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- leadership -->
+  <div class="section" style="padding-top:20px">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px">
+        <h2 class="h2" style="font-size:28px">Leadership</h2>
+        <span class="eyebrow" style="margin:0">Partners</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" id="lead-grid"></div>
+    </div>
+  </div>
+
+  <!-- wider team -->
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px">
+        <h2 class="h2" style="font-size:28px">Operating & investment team</h2>
+        <span class="eyebrow" style="margin:0">The bench</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" id="team-grid"></div>
+      <p style="margin-top:22px;font-size:12px;color:#a8aea6;font-style:italic">Consistent studio portraits to be supplied. Names and roles are placeholder.</p>
+    </div>
+  </div>
+
+  <!-- values band -->
+  <div class="section" style="background:#000;color:#F7F0EC;margin:0 40px;border-radius:20px">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#D67C46">How we work</p>
+      <h2 class="h2" style="color:#F7F0EC;max-width:16ch;margin-bottom:36px">We hire operators who have run the businesses we back.</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:36px">
+        <div><div style="font:900 20px 'Archivo',sans-serif;font-stretch:62%;text-transform:uppercase;color:#D67C46;margin-bottom:10px">In the room</div><p style="font-size:14.5px;line-height:1.7;color:rgba(247,240,236,.78);margin:0">We embed inside the business — real work, week after week, with skin in the game.</p></div>
+        <div><div style="font:900 20px 'Archivo',sans-serif;font-stretch:62%;text-transform:uppercase;color:#D67C46;margin-bottom:10px">Local first</div><p style="font-size:14.5px;line-height:1.7;color:rgba(247,240,236,.78);margin:0">Teams on the ground in every market — operators, not fly-in advisors.</p></div>
+        <div><div style="font:900 20px 'Archivo',sans-serif;font-stretch:62%;text-transform:uppercase;color:#D67C46;margin-bottom:10px">Aligned</div><p style="font-size:14.5px;line-height:1.7;color:rgba(247,240,236,.78);margin:0">We earn our stake as we hit milestones together — paid to build, not to advise.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cta -->
+  <div class="section" style="display:flex;justify-content:space-between;align-items:center;gap:40px">
+    <h2 class="h2" style="max-width:16ch">Want to build with this team?</h2>
+    <a class="btn btn-primary" href="field-get-in-touch.html">Start a conversation</a>
+  </div>
+
+</div>
+
+<script>
+/* team data — placeholder (invented narrative) */
+var LEAD=[
+  ['AO','Amara Okonkwo','Managing Partner','Lagos'],
+  ['DM','David Mwangi','Partner, Investment','Nairobi'],
+  ['GA','Grace Auma','Head of Venture Building','Kampala']
+];
+var TEAM=[
+  ['ST','Samuel Tesfaye','Operating Partner','Addis Ababa'],
+  ['RN','Rachel Niyonzima','Principal','Kigali'],
+  ['DB','Daniel Banda','Operating Partner','Lusaka'],
+  ['NA','Ngozi Adeyemi','Investment Associate','Lagos'],
+  ['TM','Thomas Mensah','Finance Lead','Accra'],
+  ['FK','Fatima Kone','Go-to-Market Lead','Dar es Salaam']
+];
+function card(m){
+  return '<div class="card enh-card" style="display:flex;align-items:center;gap:16px">'+
+    '<div style="width:54px;height:54px;border-radius:50%;background:#8C2344;color:#F7F0EC;display:flex;align-items:center;justify-content:center;font:700 16px \'Archivo\',sans-serif;flex:none">'+m[0]+'</div>'+
+    '<div><h4 style="font:700 17px \'Archivo\',sans-serif;color:#000;margin:0 0 3px">'+m[1]+'</h4>'+
+    '<div style="font-size:13px;color:#4a5057">'+m[2]+'</div>'+
+    '<div style="font:500 11px \'Archivo\',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8a9088;margin-top:4px">'+m[3]+'</div></div></div>';
+}
+document.getElementById('lead-grid').innerHTML=LEAD.map(card).join('');
+document.getElementById('team-grid').innerHTML=TEAM.map(card).join('');
+</script>
+<script src="field.js"></script>
+</body>
+</html>
